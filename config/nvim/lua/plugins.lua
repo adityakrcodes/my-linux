@@ -1,8 +1,11 @@
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
-	-- Important Plugins
+	-- Discord Rich Presence plugin
 	use("andweeb/presence.nvim")
+
+	-- Dashboard plugin
+	use("glepnir/dashboard-nvim")
 
 	--Theme
 	use("folke/tokyonight.nvim")
