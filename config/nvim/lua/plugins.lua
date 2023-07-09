@@ -13,6 +13,12 @@ return require("packer").startup(function(use)
 	--Wakatime plugin
 	use("wakatime/vim-wakatime")
 
+	--Code Runner
+	use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
+
+	-- toggleterm used to emulate terminal inside nvim
+	use("akinsho/toggleterm.nvim")
+
 	--plenaty
 	use("nvim-lua/plenary.nvim")
 

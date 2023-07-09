@@ -98,3 +98,12 @@ lspconfig["lua_ls"].setup({
 		},
 	},
 })
+
+lspconfig["tsserver"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	flags = {
+		debounce_text_changes = 150,
+	},
+	root_dir = function() return vim.loop.cwd() end
+})
