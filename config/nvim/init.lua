@@ -13,3 +13,5 @@ require('akc.core.appearance')
 -- Plugin configs
 require('akc.conf.presence')
 require('akc.conf.treesitter')
+require('akc.conf.lsp-config')
+require('akc.conf.ranger')

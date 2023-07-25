@@ -3,4 +3,5 @@ require('presence'):setup({
     debounce_timeout    = 10,
     main_image          = "file",
     enable_line_number  = true,
+    workspace_text      = "Working on %s"
 })
