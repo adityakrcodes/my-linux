@@ -24,6 +24,7 @@ opt.background = "dark" -- Make use of DARK mode in color themes
 opt.termguicolors = true
 opt.signcolumn = "yes"
 
+
 -- Backspace 
 opt.backspace = "indent,eol,start"
 
@@ -36,3 +37,4 @@ opt.splitbelow = true
 
 -- Text setting
 opt.iskeyword:append('-')
+opt.scrolloff = 8
