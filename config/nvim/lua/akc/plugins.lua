@@ -35,4 +35,8 @@ return require('packer').startup(function(use)
         }
     }
     use 'wakatime/vim-wakatime'
+    use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
 end)
