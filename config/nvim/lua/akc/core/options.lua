@@ -38,3 +38,7 @@ opt.splitbelow = true
 -- Text setting
 opt.iskeyword:append('-')
 opt.scrolloff = 8
+
+-- disables netrw completely
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1

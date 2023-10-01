@@ -5,6 +5,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
+    use 'akinsho/nvim-toggleterm.lua'
     use 'wbthomason/packer.nvim'
     use 'andweeb/presence.nvim'
     use {
@@ -36,7 +37,13 @@ return require('packer').startup(function(use)
     }
     use 'wakatime/vim-wakatime'
     use {
-	"windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-}
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+    use {"akinsho/toggleterm.nvim", tag = '*'}
+    use {'nvim-tree/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+      }
 end)
