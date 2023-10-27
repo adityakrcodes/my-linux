@@ -14,4 +14,6 @@ vim.cmd(':tnoremap <Esc><Esc> <C-\\><C-n>')
 -- NvimTree
 map.set('n', '<leader>e', '<cmd> NvimTreeToggle <cr>')
 
+-- Code runner and terminal remaps
 map.set('n', '<leader>r', '<cmd> lua run_code() <cr>')
+map.set('n', '<leader>t', '<cmd> :terminal <cr>')

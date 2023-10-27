@@ -51,7 +51,7 @@ function run_code()
     if (run_command_table[vim.bo.filetype]) then
        local expanded_cmd = expand_symbol_resolver(run_command_table[vim.bo.filetype])
        local runcmd = expanded_cmd .."; " .. extra
-       local runterm = Terminal:new({ cmd = runcmd, direction = 'float'})
+       local runterm = Terminal:new({ cmd = runcmd, direction = 'horizontal'})
        runterm:toggle()
    else
        print("\nFileType not supported\n")
