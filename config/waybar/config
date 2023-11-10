@@ -3,7 +3,7 @@
         "height": 20, // Waybar height (to be removed for auto height)
         "spacing": 2, // Gaps between modules (4px)
                       // Choose the order of the modules
-        "modules-left": ["hyprland/workspaces", "cava"],
+        "modules-left": ["hyprland/workspaces", "hyprland/window"],
         "modules-center": ["clock"],
         "modules-right": ["custom/warp","tray","pulseaudio", "custom/audio-changer", "network", "cpu", "memory", "temperature", "backlight","battery", "custom/audio-menu","custom/exit", "custom/notification"],
         // Modules configuration
