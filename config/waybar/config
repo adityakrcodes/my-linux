@@ -106,7 +106,7 @@
         },
         "custom/exit": {
             "format": "  ",
-            "on-click": "wlogout",
+            "on-click": "bash ~/.config/rofi/powermenu/type-3/powermenu.sh",
             "tooltip": false
         },
         "custom/audio-menu" : {
