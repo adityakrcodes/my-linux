@@ -22,12 +22,6 @@
                 "focused": "",
                 "default": ""
             },
-            "persistent_workspaces":{
-                "1":[],
-                "2":[],
-                "3":[],
-                "4":["eDP-1"],
-            }
         },
         "tray": {
             // "icon-size": 21,
