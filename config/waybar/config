@@ -5,7 +5,7 @@
                       // Choose the order of the modules
         "modules-left": ["hyprland/workspaces", "hyprland/window"],
         "modules-center": ["clock"],
-        "modules-right": ["custom/warp","tray","pulseaudio", "custom/audio-changer", "network", "cpu", "memory", "temperature", "backlight","battery", "custom/audio-menu","custom/exit", "custom/notification"],
+        "modules-right": ["custom/warp","tray","pulseaudio", "custom/audio-changer", "network", "cpu", "memory", "temperature", "custom/fan-speed","backlight","battery", "custom/audio-menu","custom/exit", "custom/notification"],
         // Modules configuration
         "hyprland/workspaces": {
             "disable-scroll": true,
@@ -113,6 +113,11 @@
             "format": "🔊",
             "on-click": "eww open audio_menu --toggle --config ~/.config/eww/aud_menu",
             "tooltip": false
+        },
+        "custom/fan-speed": {
+            "exec": "sensors | awk '/Processor Fan:/ {print $3}'",
+            "format": "🌬 {}",
+            "interval":3,
         },
         "custom/notification": {
             "tooltip": false,
