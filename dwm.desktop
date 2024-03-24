@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=AKC-DWM
+Comment=AKC-DWM
+Exec=/usr/local/bin/dwm
+Icon=/usr/loca/bin/dwm.png
+Exec=/home/adityakrcodes/.xinitrc
+Type=XSession
