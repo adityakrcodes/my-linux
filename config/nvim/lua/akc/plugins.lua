@@ -64,5 +64,6 @@ return require('packer').startup(function(use)
             }
         end,
     })
+    use {'mistricky/codesnap.nvim', run = 'make'}
     use 'github/copilot.vim'
 end)

@@ -17,3 +17,6 @@ map.set('n', '<leader>e', '<cmd> NvimTreeToggle <cr>')
 -- Code runner and terminal remaps
 map.set('n', '<leader>r', '<cmd> lua run_code() <cr>')
 map.set('n', '<leader>t', '<cmd> :terminal <cr>')
+
+-- CodeSnap Keymaps
+map.set('n', '<leader>cs', '<cmd> :CodeSnapSave <cr>')
