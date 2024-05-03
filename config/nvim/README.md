@@ -31,5 +31,5 @@ ln -s $HOME/repos/my-linux/config/nvim $HOME/.config/nvim
     - [ ] windwp/nvim-autopairs
     - [ ] VonHeikemen/lsp-zero.nvim
     - [ ] nvim-treesitter/nvim-treesitter
-    - [ ] a good theme
+    - [x] a good theme (Installed AYU)
     - [ ] akinsho/nvim-toggleterm.lua

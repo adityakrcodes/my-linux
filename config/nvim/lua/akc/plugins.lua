@@ -48,6 +48,7 @@ local plugins = {
             }
         end,
     },
+    {'ayu-theme/ayu-vim', as = 'ayu'},
 }
 
 require("lazy").setup(plugins, opts)
