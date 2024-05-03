@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+	{'nvim-tree/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'},
 
 }
 
