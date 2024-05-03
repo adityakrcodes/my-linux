@@ -36,6 +36,10 @@ local plugins = {
             "nvim-lua/plenary.nvim",
         },
     },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
 }
 
 require("lazy").setup(plugins, opts)
