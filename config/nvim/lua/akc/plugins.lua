@@ -15,7 +15,7 @@ local plugins = {
 	{'nvim-tree/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'},
     {'github/copilot.vim', lazy=false},
     {'wakatime/vim-wakatime', lazy=false},
-
+    {'andweeb/presence.nvim', lazy=false},
 }
 
 require("lazy").setup(plugins, opts)
