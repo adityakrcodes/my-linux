@@ -25,7 +25,7 @@ ln -s $HOME/repos/my-linux/config/nvim $HOME/.config/nvim
 ## TO-DOs
 
 - [ ] Install Plugins
-    - [ ] m4xshen/autoclose.nvim
+    - [x] m4xshen/autoclose.nvim
     - [ ] mistricky/codesnap.nvim
     - [ ] numToStr/Comment.nvim
     - [ ] windwp/nvim-autopairs
