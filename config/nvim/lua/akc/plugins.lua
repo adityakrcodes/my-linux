@@ -19,6 +19,23 @@ local plugins = {
     {'github/copilot.vim', lazy=false},
     {'wakatime/vim-wakatime', lazy=false},
     {'andweeb/presence.nvim', lazy=false},
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.6',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    {
+        "kdheepak/lazygit.nvim",
+    	cmd = {
+    		"LazyGit",
+    		"LazyGitConfig",
+    		"LazyGitCurrentFile",
+    		"LazyGitFilter",
+    		"LazyGitFilterCurrentFile",
+    	},
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+    },
 }
 
 require("lazy").setup(plugins, opts)
