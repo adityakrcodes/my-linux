@@ -49,6 +49,7 @@ local plugins = {
         end,
     },
     {'ayu-theme/ayu-vim', as = 'ayu'},
+    {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
     {'m4xshen/autoclose.nvim'},
 }
 

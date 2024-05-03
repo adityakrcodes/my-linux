@@ -4,5 +4,5 @@ require("presence").setup{
     main_image          = "file",
     enable_line_number  = true,
     workspace_text      = "Working on %s"
-})
+}
 

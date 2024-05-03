@@ -10,4 +10,6 @@ require('akc.core.appearance')
 require('akc.conf.nvimtree')
 require('akc.conf.presence')
 require('akc.conf.lualine')
+require('akc.conf.treesitter')
+
 
