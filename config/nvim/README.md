@@ -28,8 +28,7 @@ ln -s $HOME/repos/my-linux/config/nvim $HOME/.config/nvim
     - [x] m4xshen/autoclose.nvim
     - [ ] mistricky/codesnap.nvim
     - [ ] numToStr/Comment.nvim
-    - [ ] windwp/nvim-autopairs
     - [ ] VonHeikemen/lsp-zero.nvim
-    - [ ] nvim-treesitter/nvim-treesitter
+    - [x] nvim-treesitter/nvim-treesitter
     - [x] a good theme (Installed AYU)
     - [ ] akinsho/nvim-toggleterm.lua
