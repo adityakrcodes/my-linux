@@ -1,5 +1,5 @@
-require('presence'):setup({
-    neovim_image_text   = "Neovim bolte!!!",
+require("presence").setup{
+    neovim_image_text   = "Neovim BOLTE!!!",
     debounce_timeout    = 10,
     main_image          = "file",
     enable_line_number  = true,
