@@ -40,6 +40,14 @@ local plugins = {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
+    {
+        'Pocco81/auto-save.nvim',
+        config = function()
+            require('auto-save').setup{
+                -- config here
+            }
+        end,
+    },
 }
 
 require("lazy").setup(plugins, opts)
