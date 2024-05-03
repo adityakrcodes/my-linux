@@ -52,6 +52,14 @@ local plugins = {
     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
     {'m4xshen/autoclose.nvim'},
     {'akinsho/toggleterm.nvim', version = "*", config = true},
+    {'numToStr/Comment.nvim',
+        opts = {
+            mappings = {
+                basic = true,
+            },
+        },
+        lazy = false,
+}
 }
 
 require("lazy").setup(plugins, opts)
