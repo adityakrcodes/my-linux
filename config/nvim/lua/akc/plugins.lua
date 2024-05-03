@@ -49,6 +49,7 @@ local plugins = {
         end,
     },
     {'ayu-theme/ayu-vim', as = 'ayu'},
+    {'m4xshen/autoclose.nvim'},
 }
 
 require("lazy").setup(plugins, opts)
