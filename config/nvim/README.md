@@ -31,4 +31,4 @@ ln -s $HOME/repos/my-linux/config/nvim $HOME/.config/nvim
     - [ ] VonHeikemen/lsp-zero.nvim
     - [x] nvim-treesitter/nvim-treesitter
     - [x] a good theme (Installed AYU)
-    - [ ] akinsho/nvim-toggleterm.lua
+    - [x] akinsho/nvim-toggleterm.lua
