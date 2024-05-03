@@ -11,5 +11,5 @@ require('akc.conf.nvimtree')
 require('akc.conf.presence')
 require('akc.conf.lualine')
 require('akc.conf.treesitter')
-
+require('akc.conf.auto-close')
 

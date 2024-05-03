@@ -51,6 +51,7 @@ local plugins = {
     {'ayu-theme/ayu-vim', as = 'ayu'},
     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
     {'m4xshen/autoclose.nvim'},
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
 }
 
 require("lazy").setup(plugins, opts)
