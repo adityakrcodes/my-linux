@@ -68,7 +68,14 @@ local plugins = {
             vim.g.mkdp_filetypes = { "markdown" }
         end,
         ft = { "markdown" },
-   },
+    },
+    {'romgrk/barbar.nvim',
+        dependencies = {
+            'lewis6991/gitsigns.nvim',
+            'nvim-tree/nvim-web-devicons',
+    },
+        init = function() vim.g.barbar_auto_setup = false end,
+    },
 }
 
 require("lazy").setup(plugins, opts)
