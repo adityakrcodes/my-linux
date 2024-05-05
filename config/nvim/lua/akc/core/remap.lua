@@ -38,3 +38,6 @@ map.set('n', '<C-Left>', '<cmd> BufferPrevious <cr>')
 map.set('n', '<C-Up>', '<cmd> BufferMoveNext <cr>')
 map.set('n', '<C-Down>', '<cmd> BufferMovePrevious <cr>')
 
+-- Markdown Keymaps
+map.set('n', '<leader>md', '<cmd> MarkdownPreview <cr>')
+map.set('n', '<leader>mc', '<cmd> MarkdownPreviewStop <cr>')
