@@ -1,69 +1,81 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
-
-return require('packer').startup(function(use)
-    -- Packer can manage itself
-    use 'akinsho/nvim-toggleterm.lua'
-    use 'wbthomason/packer.nvim'
-    use 'andweeb/presence.nvim'
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.2',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
-    use { "bluz71/vim-moonfly-colors", as = "moonfly" }
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('kdheepak/lazygit.nvim')
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' }, -- Required
-            {                            -- Optional
-                'williamboman/mason.nvim',
-                run = function()
-                    pcall(vim.api.nvim_command, 'MasonUpdate')
-                end,
-            },
-            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
-
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },     -- Required
-            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' },     -- Required
-        }
-    }
-    use 'wakatime/vim-wakatime'
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
-    use {"akinsho/toggleterm.nvim", tag = '*'}
-    use {'nvim-tree/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
-    use {
+local plugins = {
+	{
+        'nvim-tree/nvim-tree.lua',
+        dependencies = { 'kyazdani42/nvim-web-devicons' }
+    },
+    {'github/copilot.vim', lazy=false},
+    {'wakatime/vim-wakatime', lazy=false},
+    {'andweeb/presence.nvim', lazy=false},
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.6',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    {
+        "kdheepak/lazygit.nvim",
+    	cmd = {
+    		"LazyGit",
+    		"LazyGitConfig",
+    		"LazyGitCurrentFile",
+    		"LazyGitFilter",
+    		"LazyGitFilterCurrentFile",
+    	},
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+    },
+    {
         'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
-    use {
-        'numToStr/Comment.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+    {
+        'Pocco81/auto-save.nvim',
         config = function()
-            require('Comment').setup()
-        end
-    }
-    use {
-        'm4xshen/autoclose.nvim'
-    }
-    use({
-        "Pocco81/auto-save.nvim",
-        config = function()
-            require("auto-save").setup {
-                -- your config goes here
-                -- or just leave it empty :)
+            require('auto-save').setup{
+                -- config here
             }
         end,
-    })
-    use {'mistricky/codesnap.nvim', run = 'make'}
-    use 'github/copilot.vim'
-end)
+    },
+    {'ayu-theme/ayu-vim', as = 'ayu'},
+    {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+    {'m4xshen/autoclose.nvim'},
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
+    {'numToStr/Comment.nvim',
+        opts = {
+            mappings = {
+                basic = true,
+            },
+        },
+        lazy = false,
+    },
+    {
+    "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        build = "cd app && yarn install",
+        init = function()
+            vim.g.mkdp_filetypes = { "markdown" }
+        end,
+        ft = { "markdown" },
+    },
+    {'romgrk/barbar.nvim',
+        dependencies = {
+            'lewis6991/gitsigns.nvim',
+            'nvim-tree/nvim-web-devicons',
+    },
+        init = function() vim.g.barbar_auto_setup = false end,
+    },
+}
+
+require("lazy").setup(plugins, opts)

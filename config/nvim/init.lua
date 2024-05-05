@@ -1,24 +1,16 @@
--- Options
---
-require('akc.core.options')
-
--- Keymaps
-require('akc.core.remap')
-
--- Plugin file
+-- Plugin File
 require('akc.plugins')
-
-require('akc.core.runner')
-
--- Appearance and themes
+ 
+-- Core configs
+require('akc.core.options')
+require('akc.core.remap')
 require('akc.core.appearance')
 
--- Plugin configs
-require('akc.conf.presence')
--- require('akc.conf.treesitter')
-require('akc.conf.lsp-config')
+-- Plugins Configurations
 require('akc.conf.nvimtree')
+require('akc.conf.presence')
 require('akc.conf.lualine')
-require('akc.conf.comment')
-require('akc.conf.brackets')
-require('akc.conf.codesnap')
+require('akc.conf.treesitter')
+require('akc.conf.auto-close')
+require('akc.conf.toggleterm')
+require('akc.conf.barbar')
