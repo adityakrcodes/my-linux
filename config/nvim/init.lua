@@ -1,11 +1,13 @@
 -- Plugin File
 require('akc.plugins')
- 
+
 -- Core configs
 require('akc.core.options')
 require('akc.core.remap')
 require('akc.core.appearance')
 require('akc.core.code-runner')
+require('akc.core.lsp')
+require('akc.core.cmp')
 
 -- Plugins Configurations
 require('akc.conf.nvimtree')
