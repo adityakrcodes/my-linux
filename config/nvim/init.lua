@@ -7,6 +7,7 @@ require('akc.core.remap')
 require('akc.core.appearance')
 require('akc.core.code-runner')
 require('akc.core.lsp')
+require('akc.core.cmp')
 
 -- Plugins Configurations
 require('akc.conf.nvimtree')
