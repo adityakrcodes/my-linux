@@ -6,7 +6,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {'bashls', 'clangd', 'cssls', 'html', 'jsonls', 'pyright', 'rust_analyzer', 'tsserver', 'vimls'},
+    ensure_installed = {'bashls', 'clangd', 'cssls', 'html', 'jsonls', 'pyright', 'rust_analyzer', 'vimls'},
     handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
