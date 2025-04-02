@@ -204,5 +204,6 @@ tooltip label {
   animation-direction: alternate;
 }
 #custom-notification {
-    font-family: "NotoSansMono Nerd Font";    
+    font-family: "NotoSansMono Nerd Font";
+    margin-right:5px;
 }
